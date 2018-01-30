@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <title>Sakshi's DM notes for term 6</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <style>
+        .mySlides {text-align:center; display:block;}
+        .center {text-align:center; margin: 0;}
+        .content {text-align:center; border: 1px solid teal;}
+        .top {
+            list-style-type: none;
+            margin: 0;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            background-color: #2d2d2d;
+            left: 0;
+            display: block;
+            float: left;
+            padding: 0;
+        }
+        li{ float: left; }
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 15px 15px;
+            text-decoration: none;
+        }
+        li a:hover {
+            background-color: #134545;
+        }
+        .active {
+            background-color: #339595;
+        }
+    </style>
+<body>
+<br>
+ <ul class="top">
+   <li><a href="https://sakshinotes.github.io/term6/index.html">Home</a></li>
+   <li class="active"><a href="https://sakshinotes.github.io/term6/DM/index.html">DM</a></li>
+   <li><a href="https://sakshinotes.github.io/term6/GCK/index.html">GCK</a></li>
+ 
+ </ul> 
+ </br>   
+    
+    <div class="center">
+        <!--<h2>CF</h2>-->
+        <!--<p>Upto 22/10/16</p>-->
+        <!--<p id="pres">as</p>-->
+    </div>
+ 
+
+    <div class="center">
+        <div class="section">
+            <button class="btn" onclick="plusDivs(-1)">Prev</button>
+            <bold id="pres"></bold>
+            <button class="btn" onclick="plusDivs(1)">Next</button>
+        </div>
+    </div>
+    
+    <div class="content">
+        <img id="pic" class="mySlides" src="page1.jpg" style="width:100%" >
+    </div>
+
+    <div class="center">
+        <div class="section">
+            <button class="btn" onclick="plusDivs(-1)">Prev</button>
+            <button class="btn" onclick="plusDivs(1)">Next</button>
+        </div>
+    </div>
+
+    <script>
+        var slides = 48;
+        var slideIndex = 1;
+        document.getElementById("pres").innerHTML = slideIndex + "/" + slides;
+        function plusDivs(n) {
+            slideIndex = slideIndex + n;
+            if (slideIndex > slides) {slideIndex=1;}
+            if (slideIndex < 1) {slideIndex=slides;}
+            document.getElementById("pic").src = "page" + slideIndex + ".jpg";
+            document.getElementById("pres").innerHTML = slideIndex + "/" + slides;
+        }
+    </script>
+</body>
+</html>
